@@ -1,0 +1,59 @@
+<%- include ('./partials/head') %>
+<main>
+    <% if (locals.user) { %>
+        <div class="purpose-box">
+            <p class="hello-user">
+                Hola
+                <span class="user-data">
+                    <%= user.name %>
+                </span>
+                , elegiste el color
+                <span class="user-data">
+                    <%= user.color %>
+                </span>
+                , tu e-mail es:
+                <span class="user-data">
+                    <%= user.email %>
+                </span>
+                y tu edad es:
+                <span class="user-data">
+                    <%= user.age %>.
+                </span> 
+            </p>
+        </div>
+    <% } %>
+    <form class="form-form" action="/" method="POST">
+        <div class="input-box">
+            <label class="input-label" for="name">
+                Ingrese su nombre
+            </label>
+            <input class="input-text" type="text" name="name" id="name" required>
+        </div>
+        <div class="input-box">
+            <label class="input-label" for="color">
+                Elija un color
+            </label>
+            <input class="input-color" type="color" name="color" id="color" value="#FFFFFF" required>
+        </div>
+        <div class="input-box">
+            <label class="input-label" for="email">
+                Ingrese un e-mail
+            </label>
+            <input class="input-text" type="email" name="email" id="email" required>
+        </div>
+        <div class="input-box">
+            <label class="input-label" for="age">
+                Ingrese su edad
+            </label>
+            <input class="input-text" type="number" name="age" id="age" min="1" max="99">
+        </div>
+        <div class="button-box">
+            <button class="send-button" type="submit">
+                ENVIAR
+            </button>
+        </div>
+    </form>
+
+
+</main>
+<%- include ('./partials/footer') %>

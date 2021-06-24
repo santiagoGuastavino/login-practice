@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.body-box {
+    font-family: 'Grandstander', cursive;
+    font-size: 2rem;
+    line-height: 39px;
+}
+
+.form-form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.input-box, .button-box {
+    border: solid 2px #FFBF00;
+    width: 40%;
+    text-align: center;
+    padding: 20px;
+    margin: 2px;
+}
+
+.button-box {
+    border: double 5px #CD5C5C;
+}
+
+.input-label {
+    display: block;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.input-text, .input-color {
+    width: 40%;
+    text-align: center;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 4px;
+    border: #FF7F50 2px solid;
+    border-radius: 8px;
+}
+
+.input-text:focus {
+    outline-color: #DE3163;
+    border: #DE3163 2px solid;
+}
+
+.input-color {
+    padding: 0;
+    -webkit-appearance: none;
+    height: 45px;
+    cursor: pointer;
+}
+
+.input-color::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.input-color::-webkit-color-swatch  {
+    border: none;
+}
+
+.send-button {
+    border: #CD5C5C solid 1px;
+    background-image: radial-gradient(#FFA07A,#CD5C5C);
+    padding: 20px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.purpose-box {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.hello-user {
+    width: 40%;
+    text-align: center;
+    padding: 30px;
+    margin: 15px 15%;
+    border: #FF7F50 2px solid;
+}
+
+.user-data {
+    font-weight: 800;
+}
