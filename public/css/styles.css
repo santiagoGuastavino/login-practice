@@ -135,3 +135,24 @@ body {
     margin-left: 5px;
     cursor: pointer;
 }
+
+.form-footer {
+    margin-top: 2%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.forget {
+    border: none;
+    padding: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all .15s cubic-bezier(.25,.25,.25,.25);
+    cursor: pointer;
+}
+
+.forget:hover {
+    background: #A9A9A9;
+}

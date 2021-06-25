@@ -14,7 +14,6 @@ let mainController = {
             let user = {
                 ...req.body
             };
-            let color = req.body.color;
             req.session.user = user;
             if (req.body.remember) {
                 res.cookie('userColor', req.body.color, { maxAge: (1000 * 60) * 60 });
@@ -25,6 +24,11 @@ let mainController = {
 
     thanks: (req,res) => {
         res.render('thanks');
+    },
+
+    destroyCookie: (req,res) => {
+        res.clearCookie('userColor');
+        res.redirect('/');
     },
 };
 
