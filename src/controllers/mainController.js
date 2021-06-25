@@ -26,7 +26,8 @@ let mainController = {
         res.render('thanks');
     },
 
-    destroyCookie: (req,res) => {
+    reset: (req,res) => {
+        req.session.destroy();
         res.clearCookie('userColor');
         res.redirect('/');
     },

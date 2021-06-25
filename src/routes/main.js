@@ -18,7 +18,7 @@ let validations = [
 
 router.get('/', mainController.home);
 router.post('/', validations, mainController.user);  
-router.get('/goodbye', mainController.destroyCookie);
+router.get('/reset', mainController.reset);
 router.get('/thanks', mainController.thanks);
 
 module.exports = router;
