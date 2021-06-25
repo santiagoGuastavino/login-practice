@@ -3,57 +3,129 @@
     <% if (locals.user) { %>
         <div class="purpose-box">
             <p class="hello-user">
-                Hola
+                ¡Hola
                 <span class="user-data">
-                    <%= user.name %>
+                    <%= user.name %>!
                 </span>
-                , elegiste el color
+                Elegiste el color
                 <span class="user-data">
-                    <%= user.color %>
+                    <%= user.color %>.
                 </span>
-                , tu e-mail es:
+                Ingresaste el e-mail
                 <span class="user-data">
-                    <%= user.email %>
+                    <%= user.email %>.
                 </span>
-                y tu edad es:
+                Tenés
                 <span class="user-data">
-                    <%= user.age %>.
-                </span> 
+                    <%= user.age %>
+                </span>
+                años.
             </p>
         </div>
     <% } %>
     <form class="form-form" action="/" method="POST">
+        <!-- name -->
         <div class="input-box">
             <label class="input-label" for="name">
-                Ingrese su nombre
+                <span>
+                    Ingrese su nombre
+                </span>
             </label>
-            <input class="input-text" type="text" name="name" id="name" required>
+            <input
+                class="input-text
+                <%= locals.errors && locals.errors.name ? 'input-error' : null %>"
+                type="text"
+                name="name"
+                id="name"
+                value="<%= locals.oldData ? oldData.name : null %>"
+            >
+            <% if (locals.errors && locals.errors.name) { %>
+                <i class="fas fa-exclamation"></i>
+                <div class="error">
+                    <span>
+                        <%= locals.errors.name.msg %>
+                    </span>
+                </div>
+            <% } %>
         </div>
+        <!-- color -->
         <div class="input-box">
             <label class="input-label" for="color">
-                Elija un color
+                <span>
+                    Elija un color
+                </span>
             </label>
-            <input class="input-color" type="color" name="color" id="color" value="#FFFFFF" required>
+            <input 
+                class="input-color
+                <%= locals.errors && locals.errors.color ? 'input-error' : null %>" 
+                type="color" 
+                name="color" 
+                id="color" 
+                value="<%= locals.oldData ? oldData.color : '#FFFFFF' %>"
+            >
+            <% if (locals.errors && locals.errors.color) { %>
+                <i class="fas fa-exclamation"></i>
+                <div class="error">
+                    <span>
+                        <%= locals.errors.color.msg %>
+                    </span>
+                </div>
+            <% } %>
         </div>
+        <!-- email -->
         <div class="input-box">
             <label class="input-label" for="email">
-                Ingrese un e-mail
+                <span>
+                    Ingrese un e-mail
+                </span>
             </label>
-            <input class="input-text" type="email" name="email" id="email" required>
+            <input 
+                class="input-text
+                <%= locals.errors && locals.errors.email ? 'input-error' : null %>"
+                type="email" 
+                name="email" 
+                id="email"
+                value="<%= locals.oldData ? oldData.email : null %>"
+            >
+            <% if (locals.errors && locals.errors.email) { %>
+                <i class="fas fa-exclamation"></i>
+                <div class="error">
+                    <span>
+                        <%= locals.errors.email.msg %>
+                    </span>
+                </div>
+            <% } %>
         </div>
+        <!-- age -->
         <div class="input-box">
             <label class="input-label" for="age">
-                Ingrese su edad
+                <span>
+                    Ingrese su edad
+                </span>
             </label>
-            <input class="input-text" type="number" name="age" id="age" min="1" max="99">
+            <input 
+                class="input-text
+                <%= locals.errors && locals.errors.age ? 'input-error' : null %>"
+                type="text" 
+                name="age" 
+                id="age"
+                value="<%= locals.oldData ? oldData.age : null %>"
+            >
+            <% if (locals.errors && locals.errors.age) { %>
+                <i class="fas fa-exclamation"></i>
+                <div class="error">
+                    <span>
+                        <%= locals.errors.age.msg %>
+                    </span>
+                </div>
+            <% } %>
         </div>
+        <!-- BUTTON -->
         <div class="button-box">
             <button class="send-button" type="submit">
                 ENVIAR
             </button>
         </div>
     </form>
-
-
 </main>
 <%- include ('./partials/footer') %>

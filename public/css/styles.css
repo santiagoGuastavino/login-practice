@@ -30,6 +30,10 @@ img {
     margin: 2px;
 }
 
+.input-box {
+    position: relative;
+}
+
 .button-box {
     border: double 5px #CD5C5C;
 }
@@ -37,6 +41,9 @@ img {
 .input-label {
     display: block;
     padding-bottom: 5px;
+}
+
+.input-label span {
     cursor: pointer;
 }
 
@@ -95,4 +102,38 @@ img {
 
 .user-data {
     font-weight: 800;
+}
+
+.error {
+    /* display: block; */
+    font-size: 1rem;
+    /* color: #FFF; */
+    text-align: center;
+    font-weight: 800;
+    text-shadow: -1px 0 #FFF, 0 1px #FFF, 1px 0 #FFF, 0 -1px #FFF;
+}
+
+.error span {
+    padding: 8px;
+    background: red;
+    border-radius: 12px;
+    /* border: solid 1px black; */
+}
+
+.input-error {
+    border: red 2px solid;
+}
+
+.input-box i {
+    position: absolute;
+    top: 42%;
+    right: 34%;
+    /* height: 32px; */
+    /* width: 32px; */
+    /* border-radius: 50%; */
+    /* background: red; */
+    /* border: solid 1px black; */
+    color: red;
+    /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+
 }
