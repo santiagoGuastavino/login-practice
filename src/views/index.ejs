@@ -146,18 +146,16 @@
             </label>
         </div>
         <!-- BUTTON -->
-        <div class="button-box">
-            <button class="send-button" type="submit"
-                style="background: linear-gradient(to bottom right,#FFF,<%= locals.color ? locals.color : null %>);"
-            >
+        <div class="button-box"
+            style="background: linear-gradient(to bottom right,#FFF,<%= locals.color ? locals.color : null %>);"
+        >
+            <button class="send-button" type="submit">
                 ENVIAR
             </button>
         </div>
     </form>
     <form class="form-footer" action='/reset' method="GET">
-        <button class="forget"
-            style="background: linear-gradient(to bottom right,#FFF,<%= locals.color ? locals.color : null %>);"
-        >
+        <button class="forget">
             olvidar color
         </button>
     </form>
