@@ -16,7 +16,7 @@ a {
 
 body {
     font-family: 'Grandstander', cursive;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 39px;
 }
 
@@ -24,28 +24,23 @@ body {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    padding-top: 50px;
+    margin-top: 20px;
 }
 
 .input-box, .button-box {
-    border: solid 2px #FFBF00;
-    width: 40%;
+    border: solid 2px black;
+    width: 30%;
     text-align: center;
-    padding: 20px;
-    margin: 2px;
-}
-
-.input-box {
-    position: relative;
+    padding: 1%;
+    border-bottom: none;
 }
 
 .button-box {
-    border: double 5px #CD5C5C;
+    border: double 5px black;
 }
 
 .input-label {
     display: block;
-    padding-bottom: 5px;
 }
 
 .input-label span {
@@ -53,25 +48,18 @@ body {
 }
 
 .input-text, .input-color {
-    width: 40%;
+    width: 60%;
     text-align: center;
     font-family: inherit;
     font-size: inherit;
     padding: 4px;
-    border: #FF7F50 2px solid;
-    border-radius: 8px;
-}
-
-.input-text:focus {
-    outline-color: #DE3163;
-    border: #DE3163 2px solid;
+    border: black 2px solid;
 }
 
 .input-color {
     padding: 0;
     -webkit-appearance: none;
-    height: 45px;
-    cursor: pointer;
+    height: 36px;
 }
 
 .input-color::-webkit-color-swatch-wrapper {
@@ -83,12 +71,19 @@ body {
 }
 
 .send-button {
-    border: #CD5C5C solid 1px;
-    background-image: radial-gradient(#FFA07A,#CD5C5C);
-    padding: 20px;
+    width: 40%;
+    height: 36px;
     cursor: pointer;
     font-family: inherit;
     font-size: inherit;
+    border: 2px black solid;
+    background: #FFF;
+    transition: all .15s cubic-bezier(.25,.25,.25,.25);
+}
+
+.send-button:hover {
+    color: #FFF;
+    background: black;
 }
 
 .purpose-box {
@@ -101,8 +96,8 @@ body {
     width: 40%;
     text-align: center;
     padding: 30px;
-    margin: 15px 15%;
-    border: #FF7F50 2px solid;
+    margin: 20px 15% 0 15%;
+    border: black 2px solid;
     opacity: .8;
     transition: all .2s cubic-bezier(.25,.25,.25,.25);
 }
@@ -120,27 +115,23 @@ body {
     font-size: 1rem;
     text-align: center;
     font-weight: 800;
-    text-shadow: -1px 0 #FFF, 0 1px #FFF, 1px 0 #FFF, 0 -1px #FFF;
 }
 
 .error span {
-    padding: 8px;
-    background: red;
-    border-radius: 12px;
+    padding: 4px;
+    color: red;
 }
 
 .input-error {
     border: red 2px solid;
 }
 
-.input-box i {
-    position: absolute;
-    top: 42%;
-    right: 34%;
-    color: red;
-}
-
 .thank-you-box {
     opacity: 1;
     box-shadow: 5px 5px 5px 5px black;
+}
+
+.input-checkbox {
+    margin-left: 5px;
+    cursor: pointer;
 }

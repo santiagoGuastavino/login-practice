@@ -2,6 +2,7 @@ let express = require('express');
 let app = express();
 let path = require('path');
 let session = require('express-session');
+let cookies = require('cookie-parser');
 
 let viewsPath = path.join(__dirname + '/views');
 
@@ -16,6 +17,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
+app.use(cookies());
 
 let userMiddleware = require('./middlewares/userMiddleware');
 

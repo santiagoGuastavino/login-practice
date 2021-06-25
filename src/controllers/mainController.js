@@ -14,9 +14,11 @@ let mainController = {
             let user = {
                 ...req.body
             };
-            let userColor = req.body.color;
+            let color = req.body.color;
             req.session.user = user;
-            req.session.color = userColor;
+            if (req.body.remember) {
+                res.cookie('userColor', req.body.color, { maxAge: (1000 * 60) * 60 });
+            };
             res.redirect('/');
         };
     },

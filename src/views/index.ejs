@@ -40,7 +40,6 @@
                 value="<%= locals.oldData ? oldData.name : null %>"
             >
             <% if (locals.errors && locals.errors.name) { %>
-                <i class="fas fa-exclamation"></i>
                 <div class="error">
                     <span>
                         <%= locals.errors.name.msg %>
@@ -64,7 +63,6 @@
                 value="<%= locals.oldData ? oldData.color : '#FFFFFF' %>"
             >
             <% if (locals.errors && locals.errors.color) { %>
-                <i class="fas fa-exclamation"></i>
                 <div class="error">
                     <span>
                         <%= locals.errors.color.msg %>
@@ -88,7 +86,6 @@
                 value="<%= locals.oldData ? oldData.email : null %>"
             >
             <% if (locals.errors && locals.errors.email) { %>
-                <i class="fas fa-exclamation"></i>
                 <div class="error">
                     <span>
                         <%= locals.errors.email.msg %>
@@ -112,13 +109,28 @@
                 value="<%= locals.oldData ? oldData.age : null %>"
             >
             <% if (locals.errors && locals.errors.age) { %>
-                <i class="fas fa-exclamation"></i>
                 <div class="error">
                     <span>
                         <%= locals.errors.age.msg %>
                     </span>
                 </div>
             <% } %>
+        </div>
+        <!-- remember -->
+        <div class="input-box">
+            <label class="input-label" for="remember">
+                <span>
+                    Recordar color
+                </span>
+                <input 
+                    class="input-checkbox"
+                    type="checkbox"
+                    name="remember"
+                    id="remember"
+                    value="true"
+                    <%= locals.oldData && oldData.remember ? 'checked' : null %>
+                >
+            </label>
         </div>
         <!-- BUTTON -->
         <div class="button-box">
