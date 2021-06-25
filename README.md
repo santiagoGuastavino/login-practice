@@ -1,6 +1,6 @@
 [Session & Cookies](https://session-cookies-practice.herokuapp.com/)
 ---
-
+_(not optimized for small viewports)_
 <h3>For this project I used:</h3>  
 
 - [Express Node.js framework](https://expressjs.com/)
