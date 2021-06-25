@@ -156,3 +156,16 @@ body {
 .forget:hover {
     background: #A9A9A9;
 }
+
+.img-riquelme {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.img-riquelme img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+}
