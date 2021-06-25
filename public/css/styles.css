@@ -9,7 +9,12 @@ img {
     display: block;
 }
 
-.body-box {
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
     font-family: 'Grandstander', cursive;
     font-size: 2rem;
     line-height: 39px;
@@ -98,6 +103,13 @@ img {
     padding: 30px;
     margin: 15px 15%;
     border: #FF7F50 2px solid;
+    opacity: .8;
+    transition: all .2s cubic-bezier(.25,.25,.25,.25);
+}
+
+.hello-user:hover {
+    opacity: 1;
+    box-shadow: 5px 5px 5px 5px black;
 }
 
 .user-data {
@@ -105,9 +117,7 @@ img {
 }
 
 .error {
-    /* display: block; */
     font-size: 1rem;
-    /* color: #FFF; */
     text-align: center;
     font-weight: 800;
     text-shadow: -1px 0 #FFF, 0 1px #FFF, 1px 0 #FFF, 0 -1px #FFF;
@@ -117,7 +127,6 @@ img {
     padding: 8px;
     background: red;
     border-radius: 12px;
-    /* border: solid 1px black; */
 }
 
 .input-error {
@@ -128,12 +137,10 @@ img {
     position: absolute;
     top: 42%;
     right: 34%;
-    /* height: 32px; */
-    /* width: 32px; */
-    /* border-radius: 50%; */
-    /* background: red; */
-    /* border: solid 1px black; */
     color: red;
-    /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+}
 
+.thank-you-box {
+    opacity: 1;
+    box-shadow: 5px 5px 5px 5px black;
 }

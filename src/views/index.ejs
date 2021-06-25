@@ -2,7 +2,7 @@
 <main>
     <% if (locals.user) { %>
         <div class="purpose-box">
-            <p class="hello-user">
+            <a class="hello-user" href="/thanks">
                 ¡Hola
                 <span class="user-data">
                     <%= user.name %>!
@@ -20,7 +20,7 @@
                     <%= user.age %>
                 </span>
                 años.
-            </p>
+            </a>
         </div>
     <% } %>
     <form class="form-form" action="/" method="POST">

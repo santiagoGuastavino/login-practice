@@ -14,9 +14,15 @@ let mainController = {
             let user = {
                 ...req.body
             };
+            let userColor = req.body.color;
             req.session.user = user;
+            req.session.color = userColor;
             res.redirect('/');
         };
+    },
+
+    thanks: (req,res) => {
+        res.render('thanks');
     },
 };
 

@@ -1,0 +1,13 @@
+<%- include ('./partials/head') %>
+<main>
+    <% if (locals.user) %>
+        <div class="purpose-box">
+            <a class="hello-user thank-you-box" href="/">
+                <span class="user-data">
+                    <%= user.name %>,
+                </span>
+                gracias por visitarnos.
+            </a>
+        </div>
+</main>
+<%- include ('./partials/footer') %>

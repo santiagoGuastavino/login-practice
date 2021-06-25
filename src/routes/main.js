@@ -18,5 +18,6 @@ let validations = [
 
 router.get('/', mainController.home);
 router.post('/', validations, mainController.user);  
+router.get('/thanks', mainController.thanks);
 
 module.exports = router;
