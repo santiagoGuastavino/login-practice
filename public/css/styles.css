@@ -129,6 +129,7 @@ body {
 .thank-you-box {
     opacity: 1;
     box-shadow: 5px 5px 5px 5px black;
+    position: relative;
 }
 
 .input-checkbox {
@@ -168,4 +169,11 @@ body {
     width: 500px;
     height: 500px;
     border-radius: 50%;
+}
+
+.volver {
+    font-size: 1rem;
+    position: absolute;
+    right: 10px;
+    bottom: -5px;
 }
