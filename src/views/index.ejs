@@ -20,12 +20,17 @@
                     <%= user.age %>
                 </span>
                 años.
+                <span class="volver">
+                    <i class="far fa-hand-pointer"></i>
+                </span>
             </a>
         </div>
     <% } %>
     <form class="form-form" action="/" method="POST">
         <!-- name -->
-        <div class="input-box">
+        <div class="input-box" 
+            style="background: linear-gradient(to bottom right,#FFF,<%= locals.color ? locals.color : null %>);"
+        >
             <label class="input-label" for="name">
                 <span>
                     Ingrese su nombre
@@ -48,7 +53,9 @@
             <% } %>
         </div>
         <!-- color -->
-        <div class="input-box">
+        <div class="input-box"
+            style="background: linear-gradient(to bottom right,#FFF,<%= locals.color ? locals.color : null %>);"
+        >
             <label class="input-label" for="color">
                 <span>
                     Elija un color
@@ -71,7 +78,9 @@
             <% } %>
         </div>
         <!-- email -->
-        <div class="input-box">
+        <div class="input-box"
+            style="background: linear-gradient(to bottom right,#FFF,<%= locals.color ? locals.color : null %>);"
+        >
             <label class="input-label" for="email">
                 <span>
                     Ingrese un e-mail
@@ -94,7 +103,9 @@
             <% } %>
         </div>
         <!-- age -->
-        <div class="input-box">
+        <div class="input-box"
+            style="background: linear-gradient(to bottom right,#FFF,<%= locals.color ? locals.color : null %>);"
+        >
             <label class="input-label" for="age">
                 <span>
                     Ingrese su edad
@@ -117,7 +128,9 @@
             <% } %>
         </div>
         <!-- remember -->
-        <div class="input-box">
+        <div class="input-box"
+            style="background: linear-gradient(to bottom right,#FFF,<%= locals.color ? locals.color : null %>);"
+        >
             <label class="input-label" for="remember">
                 <span>
                     Recordar color
@@ -134,13 +147,17 @@
         </div>
         <!-- BUTTON -->
         <div class="button-box">
-            <button class="send-button" type="submit">
+            <button class="send-button" type="submit"
+                style="background: linear-gradient(to bottom right,#FFF,<%= locals.color ? locals.color : null %>);"
+            >
                 ENVIAR
             </button>
         </div>
     </form>
     <form class="form-footer" action='/reset' method="GET">
-        <button class="forget">
+        <button class="forget"
+            style="background: linear-gradient(to bottom right,#FFF,<%= locals.color ? locals.color : null %>);"
+        >
             olvidar color
         </button>
     </form>

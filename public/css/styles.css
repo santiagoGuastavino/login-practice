@@ -98,13 +98,22 @@ body {
     padding: 30px;
     margin: 20px 15% 0 15%;
     border: black 2px solid;
-    opacity: .8;
+    opacity: .6;
     transition: all .2s cubic-bezier(.25,.25,.25,.25);
+    position: relative;
 }
 
 .hello-user:hover {
     opacity: 1;
     box-shadow: 5px 5px 5px 5px black;
+}
+
+.hello-user i {
+    transition: all .15s cubic-bezier(.25,.25,.25,.25);
+}
+
+.hello-user:hover i {
+    font-size: 2rem;
 }
 
 .user-data {
@@ -149,9 +158,9 @@ body {
     padding: 8px;
     font-family: inherit;
     font-size: 1rem;
-    border-radius: 8px;
     transition: all .15s cubic-bezier(.25,.25,.25,.25);
     cursor: pointer;
+    background: #FFF;
 }
 
 .forget:hover {
@@ -176,4 +185,8 @@ body {
     position: absolute;
     right: 10px;
     bottom: -5px;
+}
+
+.input-box, .hello-user {
+    background: #FFF;
 }
